@@ -1056,6 +1056,11 @@ ed::EditorContext::~EditorContext()
     m_Splitter.ClearFreeMemory();
 }
 
+void ed::EditorContext::SetStyle(ax::NodeEditor::Style vStyle)
+{
+    memcpy(&m_Style, &vStyle, sizeof(vStyle));
+}
+
 void ed::EditorContext::Begin(const char* id, const ImVec2& size)
 {
     if (!m_IsInitialized)

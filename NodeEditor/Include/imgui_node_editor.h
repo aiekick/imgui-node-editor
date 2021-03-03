@@ -17,7 +17,6 @@
 # include <cstdint> // std::uintXX_t
 # include <utility> // std::move
 
-
 //------------------------------------------------------------------------------
 namespace ax {
 namespace NodeEditor {
@@ -222,7 +221,7 @@ EditorContext* CreateEditor(const Config* config = nullptr);
 void DestroyEditor(EditorContext* ctx);
 
 Style& GetStyle();
-void SetStyle(ax::NodeEditor::Detail::Style vStyle);
+void SetStyle(ax::NodeEditor::Style vStyle);
 
 const char* GetStyleColorName(StyleColor colorIndex);
 

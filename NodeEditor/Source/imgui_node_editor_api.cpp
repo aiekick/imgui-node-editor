@@ -73,7 +73,7 @@ ax::NodeEditor::Style& ax::NodeEditor::GetStyle()
     return s_Editor->GetStyle();
 }
 
-void ax::NodeEditor::SetStyle(ax::NodeEditor::Detail::Style vStyle)
+void ax::NodeEditor::SetStyle(ax::NodeEditor::Style vStyle)
 {
     s_Editor->SetStyle(vStyle);
 }

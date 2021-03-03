@@ -1250,7 +1250,7 @@ struct EditorContext
     ~EditorContext();
 
     Style& GetStyle() { return m_Style; }
-    void SetStyle(Style vStyle) { m_Style = vStyle; }
+    void SetStyle(ax::NodeEditor::Style vStyle);
 
     void Begin(const char* id, const ImVec2& size = ImVec2(0, 0));
     void End();
