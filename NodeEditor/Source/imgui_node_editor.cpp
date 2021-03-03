@@ -1058,7 +1058,30 @@ ed::EditorContext::~EditorContext()
 
 void ed::EditorContext::SetStyle(ax::NodeEditor::Style vStyle)
 {
-    memcpy(&m_Style, &vStyle, sizeof(vStyle));
+    m_Style.NodePadding = vStyle.NodePadding;
+    m_Style.NodeRounding = vStyle.NodeRounding;
+    m_Style.NodeBorderWidth = vStyle.NodeBorderWidth;
+    m_Style.HoveredNodeBorderWidth = vStyle.HoveredNodeBorderWidth;
+    m_Style.SelectedNodeBorderWidth = vStyle.SelectedNodeBorderWidth;
+    m_Style.PinRounding = vStyle.PinRounding;
+    m_Style.PinBorderWidth = vStyle.PinBorderWidth;
+    m_Style.LinkStrength = vStyle.LinkStrength;
+    m_Style.SourceDirection = vStyle.SourceDirection;
+    m_Style.TargetDirection = vStyle.TargetDirection;
+    m_Style.ScrollDuration = vStyle.ScrollDuration;
+    m_Style.FlowMarkerDistance = vStyle.FlowMarkerDistance;
+    m_Style.FlowSpeed = vStyle.FlowSpeed;
+    m_Style.FlowDuration = vStyle.FlowDuration;
+    m_Style.PivotAlignment = vStyle.PivotAlignment;
+    m_Style.PivotSize = vStyle.PivotSize;
+    m_Style.PivotScale = vStyle.PivotScale;
+    m_Style.PinCorners = vStyle.PinCorners;
+    m_Style.PinRadius = vStyle.PinRadius;
+    m_Style.PinArrowSize = vStyle.PinArrowSize;
+    m_Style.PinArrowWidth = vStyle.PinArrowWidth;
+    m_Style.GroupRounding = vStyle.GroupRounding;
+    m_Style.GroupBorderWidth = vStyle.GroupBorderWidth;
+    memcpy(&m_Style.Colors, &vStyle.Colors, sizeof(ImVec4) * StyleColor_Count);
 }
 
 void ed::EditorContext::Begin(const char* id, const ImVec2& size)
