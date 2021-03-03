@@ -5063,9 +5063,6 @@ ImDrawList* ed::HintBuilder::GetBackgroundDrawList()
     return drawList;
 }
 
-
-
-
 //------------------------------------------------------------------------------
 //
 // Style

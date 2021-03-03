@@ -73,6 +73,11 @@ ax::NodeEditor::Style& ax::NodeEditor::GetStyle()
     return s_Editor->GetStyle();
 }
 
+void ax::NodeEditor::SetStyle(ax::NodeEditor::Detail::Style vStyle)
+{
+    s_Editor->SetStyle(vStyle);
+}
+
 const char* ax::NodeEditor::GetStyleColorName(StyleColor colorIndex)
 {
     return s_Editor->GetStyle().GetColorName(colorIndex);

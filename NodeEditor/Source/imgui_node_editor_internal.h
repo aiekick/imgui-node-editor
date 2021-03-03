@@ -1188,7 +1188,7 @@ struct HintBuilder
     ImDrawList* GetBackgroundDrawList();
 };
 
-struct Style: ax::NodeEditor::Style
+struct Style : ax::NodeEditor::Style
 {
     void PushColor(StyleColor colorIndex, const ImVec4& color);
     void PopColor(int count = 1);
@@ -1250,6 +1250,7 @@ struct EditorContext
     ~EditorContext();
 
     Style& GetStyle() { return m_Style; }
+    void SetStyle(Style vStyle) { m_Style = vStyle; }
 
     void Begin(const char* id, const ImVec2& size = ImVec2(0, 0));
     void End();

@@ -222,6 +222,8 @@ EditorContext* CreateEditor(const Config* config = nullptr);
 void DestroyEditor(EditorContext* ctx);
 
 Style& GetStyle();
+void SetStyle(ax::NodeEditor::Detail::Style vStyle);
+
 const char* GetStyleColorName(StyleColor colorIndex);
 
 void PushStyleColor(StyleColor colorIndex, const ImVec4& color);
